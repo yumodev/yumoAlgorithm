@@ -1,12 +1,3 @@
----
-layout: post
-title: 23-Swap Nodes in Pairs
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 
 ### 原题目

@@ -1,12 +1,5 @@
----
-layout: post
-title: 4-Median of Two Sorted Arrays
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
-[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+
+[4、Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ### 题目
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -59,7 +52,7 @@ nums2 = [3, 4]
 
    首先想到的时候合并的方式解决，其原理就是合并两个数组，算出中位值，其运行时间为O((m+n)/2) .
    但是不能满足题目运行时间要求。
-   
+
 * 递归方式解决
 
    这种方式是在讨论区发现的。具体实现的原理：寻找数组中第 k(k=（m+n）/ 2+1)个最小的数字.
@@ -152,10 +145,10 @@ public class MedianTwoSortedArrays_4 {
 
         if(start2+index/2-1 > nums2.length-1){
             return getMedianNum(nums1,start1+index/2,nums2,start2,index-index/2);
-        } 
+        }
         if(start1+index/2-1 > nums1.length-1){
             return getMedianNum(nums1,start1,nums2,start2+index/2,index-index/2);
-        } 
+        }
 
         if(nums1[start1+index/2-1] < nums2[start2+index/2-1]){
             return getMedianNum(nums1,start1+index/2,nums2,start2,index-index/2);
@@ -175,7 +168,7 @@ public class MedianTwoSortedArrays_4 {
         long endTime = System.nanoTime();
         long time = endTime - startTime;
         System.out.println(" median:"+median +" time:"+ time);
-        
+
         startTime = System.nanoTime();
         median = findMedianSortedArraysByRecursive(nums1, nums2);
         endTime = System.nanoTime();
@@ -185,8 +178,3 @@ public class MedianTwoSortedArrays_4 {
 }
 
 ```
-
-
-
-
-

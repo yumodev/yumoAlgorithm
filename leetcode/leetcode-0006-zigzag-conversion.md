@@ -1,11 +1,3 @@
----
-layout: post
-title: 6-ZigZag Conversion
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
 
 [6. ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)
 

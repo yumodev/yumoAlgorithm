@@ -1,12 +1,5 @@
----
-layout: post
-title: 5-Longest Palindromic Substring
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
-[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+[5、Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ### 原题目
 
@@ -22,7 +15,7 @@ Given a string S, find the longest palindromic substring in S. You may assume th
 假定字符串的长度为len, 声明一个二维数组：dp = new boolean[len][len]
 dp[i][j] 标识字符串S 中S[i~j]的子串是不是回文字符串。
 判断S[i~j]如果是回文串，必须满足两个条件：
-1. S[i] = S[j] 
+1. S[i] = S[j]
 2. dp[i+1][j-1] = true。
 
 
@@ -79,9 +72,3 @@ public class LongestPalindrome_5 {
     }
 }
 ```
-
-
-
-
-
-

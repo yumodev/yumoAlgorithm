@@ -1,13 +1,5 @@
----
-layout: post
-title: 3-Longest Substring Without Repeating Characters
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
 
-[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+[3、Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ### 原题目
 
@@ -28,7 +20,7 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 
 字符串 `"abcabcbb"`, 符合结果的字串为 `"abc"`, 其长度为 `3`.
 字符串 `"bbbbb"`, 符合结果的字串为 `"b"`, 其长度为 `1`.
-字符串 `"pwwkew"`, 符合结果的字串为 `"wke"`, 其长度为 `3`. 
+字符串 `"pwwkew"`, 符合结果的字串为 `"wke"`, 其长度为 `3`.
 注意结果必须为连续的子串， 其中`"pwke"`是不同的字符组合，但不是连续的子串
 
 ### 解决思路
@@ -218,10 +210,3 @@ var str = "dvdf"
 var len = lengthOfLongestSubstring(str);
 console.log(num+" "+len);
 ```
-
-
-
-
-
-
-

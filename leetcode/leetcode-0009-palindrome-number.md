@@ -1,12 +1,3 @@
----
-layout: post
-title: 9-Palindrome Number
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)
 
 ### 原题目

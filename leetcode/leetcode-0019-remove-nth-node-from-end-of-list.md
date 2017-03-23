@@ -1,12 +1,3 @@
----
-layout: post
-title: 19-Remove Nth Node From End of List
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
 ### 原题目

@@ -1,12 +1,3 @@
----
-layout: post
-title: 21-Merge Two Sorted Lists
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 ### 原题目

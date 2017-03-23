@@ -1,13 +1,5 @@
----
-layout: post
-title: 2-Add Two Numbers
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
 
-[题目原地址](https://leetcode.com/problems/add-two-numbers/)
+[2、Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
 ### 原题目
 
@@ -27,9 +19,9 @@ Output: 7 -> 0 -> 8
 
 这是一个简单的问题，只是稍微注意下两个链表长度不一致就可以了。
 
-### 代码示例-Java 
-     
-```     
+### 代码示例-Java
+
+```
 /**
  * Created by wks on 8/5/16.
  * You are given two linked lists representing two non-negative numbers.
@@ -321,6 +313,3 @@ var ln = addTwoNumbers(l1, l2);
 console.log("result:"+listNodeToString(ln));
 
 ```
-
-
-

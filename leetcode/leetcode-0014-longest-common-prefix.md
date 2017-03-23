@@ -1,12 +1,3 @@
----
-layout: post
-title: 14-Longest Common Prefix
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
 ### 原题目
@@ -59,6 +50,5 @@ public class LongestCommonPrefix_14 {
     }
 }
 ```
-
 
 

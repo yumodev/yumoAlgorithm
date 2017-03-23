@@ -1,12 +1,3 @@
----
-layout: post
-title: 7-Reverse Integer
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
-
 [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
 
 ### 原题目

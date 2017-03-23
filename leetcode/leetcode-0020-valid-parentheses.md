@@ -1,12 +1,3 @@
----
-layout: post
-title: 20-Valid Parentheses
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
 [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 ### 原题目

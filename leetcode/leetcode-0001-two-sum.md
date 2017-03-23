@@ -1,13 +1,4 @@
----
-layout: post
-title: 1-Two Sum
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java
-description: 
----
-
-原链接:[Two Sum](https://leetcode.com/problems/two-sum/)
+[1、Two Sum](https://leetcode.com/problems/two-sum/)
 
 ### 原题目
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -83,14 +74,14 @@ public class TwoSum_1 {
     public static void main(String[] args){
         int[] nums = {2,7,11,15};
         int target = 9;
-        
+
         long startTime = System.nanoTime();
         int[] result = twoSumByHashMap(nums, target);
         long endTime = System.nanoTime();
         System.out.println(String.format("time :" + (endTime - startTime)+" [%d, %d]", result[0], result[1]));
     }
 }
-``` 
+```
 
 ### 示例代码-c++
 
@@ -166,7 +157,3 @@ var result = twoSumByMap(nums, target);
 var endTime = new Date().getTime();
 console.log("Time:"+(endTime - beginTime)+" result:"+result);
 ```
-
-
-
-

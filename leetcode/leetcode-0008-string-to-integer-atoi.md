@@ -1,12 +1,3 @@
----
-layout: post
-title: 8-String to Integer
-category: leetcode
-tags: [java, leetcode, airthmetic]
-keywords: java,c++,javascript
-description: 
----
-
 [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
 
 ### 原题目
