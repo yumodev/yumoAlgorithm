@@ -1,4 +1,3 @@
-
 [6. ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)
 
 ### 原题目
@@ -7,8 +6,8 @@ The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number o
 
 	P 		A		H		N
 	A 	P 	L	S	I	I	G
-	Y		I		R	
-	
+	Y		I		R
+
 And then read line by line: `"PAHNAPLSIIGYIR"`
 Write the code that will take a string and make this conversion given a number of rows:
 
@@ -21,10 +20,10 @@ Write the code that will take a string and make this conversion given a number o
 
 	P 		A		H		N
 	A 	P 	L	S	I	I	G
-	Y		I		R	
+	Y		I		R
 
 编写代码将给定的字符串和行数，将字符串进行锯齿转换。
-	
+
 	string convert(string text, int nRows);
 
 `convert("PAYPALISHIRING", 3)` 返回 `"PAHNAPLSIIGYIR"`.
@@ -37,13 +36,13 @@ Write the code that will take a string and make this conversion given a number o
 
 	P	 Y	 A	 I	 H	 R	 N
 	A	 P	 L	 S	 I	 I	 G
-	
+
 如果 nRows = 3  转换字符串为：`PAHNAPLSIIGYIR`
 
 	P 		A		H		N
 	A 	P 	L	S	I	I	G
-	Y		I		R	
-	
+	Y		I		R
+
 如果 nRows = 4 转换字符串为：`PINALSIGYAHRPI`
 
 	P 			I			N
@@ -53,7 +52,7 @@ Write the code that will take a string and make this conversion given a number o
 
 通过上面可以总结出一个规律，第一行和最后一行两个数据的间距为: `2 * nRows -2 `
 中间第 i 行，第1列和它临近字符的间距为: `2*nRows -2 - 2 * i`
-		
+
 
 ### 代码示例-Java
 
@@ -101,4 +100,3 @@ public class ZigZag_6 {
     }
 }
 ```
-
