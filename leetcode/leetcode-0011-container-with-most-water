@@ -1,0 +1,115 @@
+[11. Container with Most water](https://leetcode.com/problems/container-with-most-water/)
+
+### 原题目
+
+Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note: You may not slant the container and n is at least 2.
+
+Subscribe to see which companies asked this question.
+
+### 翻译
+
+给定n个非负整数a1,a2,...,an,每个整数都代表一个点(i, ai).
+n个垂直的线段比如线段的两个点(i,ai)和(i,0).找到两个线段,
+与x轴形成一个容器，使其包含最多的水。注意：你不用倾倒勇气和n最小为2.
+
+### 解题思路
+
+假定有两个点(i, ai), (j, aj), 那么这个两个点这间的容积为 area = (j-i)*min(ai, aj).
+这道题目的意思是假定有n个这样的点，求出任意的两个点和x轴之间容积最大的两个点。
+
+*  穷举法
+
+可以使用穷举法解决问题。使用两层循环逐次比较，找出所有面积最大的点。但是这种方法效率比较差，不推荐。
+
+* 求更长的边。
+
+最大盛水量取决于两边中较短的那条边，而且如果将较短的边换为更短边的话，盛水量只会变少。
+所以我们可以用两个头尾指针，计算出当前最大的盛水量后，将较短的边向中间移，
+因为我们想看看能不能把较短的边换长一点。这样一直计算到左边大于右边为止就行了。
+(i, ai), (j, aj) 面积为 area(ai, aj) = (j - i) * min(ai, aj);
+取决与小的一边。
+声明一个变量保存当前的最大的面积为maxArea. i和j标识头尾两个指针。
+如果 ai < aj 说明更大的面积可能出现在a(i++)~aj之间。
+如果 ai > aj 说明更大的铭记可能出现在ai~a(j--)之间
+
+### 代码示例-Java
+
+```
+/**
+ * Created by yimodev on 17/3/27.
+ * https://leetcode.com/problems/container-with-most-water/
+ */
+
+public class Leetcode_0011_container_with_most_water {
+
+    /**
+     * 用穷举法实现，效率比较低，通不过LeetCode的用例。
+     * @param height
+     * @return
+     */
+    public static int maxArea(int[] height) {
+        if (height == null || height.length <= 1){
+            return 0;
+        }
+        int maxArea = 0;
+        for(int i = 0; i < height.length; i++){
+            for (int j = i + 1; j < height.length; j++){
+                int area = (j - i) * Math.min(height[i], height[j]);
+                if (area > maxArea){
+                    maxArea = area;
+                }
+            }
+        }
+        return maxArea;
+    }
+
+
+    /**
+     * @param height
+     * @return
+     */
+    public static int maxArea1(int[] height) {
+        if (height == null || height.length <= 1){
+            return 0;
+        }
+
+        int left = 0;
+        int right = height.length -1;
+        int maxArea = 0;
+        int area = 0;
+        while (left < right){
+
+            if (height[left] <= height[right]){
+                area = height[left] * (right - left);
+                if (maxArea < area){
+                    maxArea = area;
+                }
+                left++;
+            }else{
+                area = height[right] * (right - left);
+                if (maxArea < area){
+                    maxArea = area;
+                }
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+
+
+    public static void test(int[] num){
+        long startTime = System.nanoTime();
+        int result = maxArea1(num);
+        long endTime = System.nanoTime();
+        System.out.println(String.format("time :" + (endTime - startTime)+" result: %s", result));
+    }
+
+    public static void main(String[] args){
+        test(new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295});
+        test(new int[]{2,6,3,1});
+        test(new int[]{2,1});
+    }
+}
+```
