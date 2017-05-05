@@ -1,0 +1,4 @@
+@startuml
+:首先对数组s进行排序;
+
+@enduml
