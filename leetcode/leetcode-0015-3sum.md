@@ -25,7 +25,7 @@ Note: The solution set must not contain duplicate triplets.
    当第一个数字 a 重复出现时跳过第二重循环。
 
    流程图如下：
-
+  ![](./res/leetcode_0015_3sum_plant.png)
 
 ### 代码示例-Java
 

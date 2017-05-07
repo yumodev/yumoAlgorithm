@@ -1,0 +1,25 @@
+@startuml
+start
+:首先对数组s进行排序;
+while(对数组S进行循环 i < s.length)
+  if(a <= 0) then (no)
+  stop
+  else(yes)
+  if(a[i] != a[i-1]) then(yes)
+   :begin=i+1, end=s.length-1, two= -a;
+   while(begin < end)
+    if(s[begin]+s[end] == -a) then(yes) 
+     : triplets.add(a, s[begin], s[end]), begin++ end--;
+    elseif (s[begin]+s[end] > -a) then(yes)
+    :end--;
+    elseif (s[begin]+s[end] < -a) then(yes)
+    :begin++;
+    endif
+   endwhile
+  else(no)
+  endif
+  endif
+endwhile;
+
+stop
+@enduml
