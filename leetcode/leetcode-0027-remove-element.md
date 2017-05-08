@@ -1,4 +1,4 @@
-[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+[27. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 
 ### 原题目
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
