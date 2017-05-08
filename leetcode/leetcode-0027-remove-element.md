@@ -1,29 +1,26 @@
-[27. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+[27. Remove Element](https://leetcode.com/problems/remove-element/)
 
 ### 原题目
-Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
-
+Given an array and a value, remove all instances of that value in place and return the new length.
 Do not allocate extra space for another array, you must do this in place with constant memory.
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
-For example,
-Given input array nums =` [1,1,2]`,
-
-Your function should return length = `2`, with the first two elements of nums being 1 and 2 respectively. It doesn't matter what you leave beyond the new length.
+Example:
+Given input array nums = [3,2,2,3], val = 3
+Your function should return length = 2, with the first two elements of nums being 2.
 
 ### 翻译
 
-给定一个排好序的数组，移除重复的元素，然后返回新的数组长度。
-要求不能额外一个数组大小的空间来实现，要求使用空间实现，
-比如：输入数组=` [1,1,2]`,
-你的方法将返回长度为=`2`，两个元素分别是1和2。这个方法并不关心新长度。
+给定一个数组和一个值Value，删除所有值等于Value的元素，返回新的数组长度。
+不要为另一个数组分配额外的空间，您必须使用常量内存来进行此操作。
+元素的顺序可以改变。 除了新的长度，你不必关心其它。
+比如：输入数组=` [3,2,2,3]`, val = 3
+你的方法将返回长度为=`2`.
 
 ### 解题思路
 
-首先这是一个已经排好序的数组，又要求不能额外的分配一个数组空间来实现。
-所以我们可以利用遍历一遍数组来实现。利用前后两个索引值i,j分别向后移动来
-实现去重有序数组的大小。
-时间复杂度为O(n)
-空间复杂度为O(2)
+在一个数组中删除值为val的元素，返回新数组的长度。这个只需要遍历一遍数组即可，
+也可以通过收尾指针遍历一遍数组。
 
 ### 代码示例-Java
 
@@ -32,38 +29,34 @@ Your function should return length = `2`, with the first two elements of nums be
 /**
  * Created by yumodev on 9/18/16.
  */
-public class RemoveDuplicates_26 {
+public class Leetcode_0027_RemoveElement {
 
-    public static int removeDuplicates(int[] nums){
-        if (nums == null){
+    public static int removeElement(int[] nums, int val){
+        if (nums == null || nums.length == 0){
             return 0;
         }
 
-        if (nums.length <= 1){
-            return 1;
-        }
 
-        int i = 0, j = 1;
-        while (i <nums.length && j < nums.length){
-            if (nums[i] == nums[j]){
-                j++;
-            }else{
-                nums[++i] = nums[j];
-                j++;
+        int i = 0;
+        for (int j = 0; j < nums.length; j++){
+            if (nums[j] != val){
+                nums[i] = nums[j];
+                i++;
             }
         }
 
-        return i+1;
+        return i;
     }
 
     public static void main(String[] args){
-        int[] nums = {2,7,11,15};
+        int[] nums = {3,2,2,3};
+        int value = 3;
         long startTime = System.nanoTime();
-        int result = removeDuplicates(nums);
+        int result = removeElement(nums, value);
         long endTime = System.nanoTime();
         long time = endTime - startTime;
 
-        System.out.println(" removeDuplicates:" + result + " time:" + time);
+        System.out.println(" removeElement:" + result + " time:" + time);
     }
 }
 ```
