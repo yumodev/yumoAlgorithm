@@ -22,6 +22,9 @@ You may assume no duplicate exists in the array.
 数据却不是有序的。但是题目的数组是由一个有序的旋转等来，那么它的特点就是这个数组分为了两部分，每部分都是有序的。
 所以这就为使用二分查找算法来解决这个问题带来了可能性。
 
+如果`nums[mid] == target` 那么mid就是要找到的索引。
+如果`nums[mid] != target `, 现在就要判断target是出现在左半边还是右半边了。假定如果`mid < end`的时候，假定出现在右半边, 如果`target > nums[mid] && target <= nums[end]`,那么`begin = mid + 1`, 否则 `end = mid -1`. 如果`mid > end`的时候，假定出现在左半边, 如果`target > nums[begin] && target <= nums[end]`,那么 `end = mid - 1,` 否则 `begin = mid + 1`;
+
 ### 代码示例-Java
 
 ```
