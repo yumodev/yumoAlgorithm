@@ -26,6 +26,8 @@
 * [26. Remove Duplicates from Sorted Array](./leetcode/leetcode-0026-remove-duplicates-from-sorted-array.md)
 * [27. Remove Element](./leetcode/leetcode-0027-remove-element.md)
 * [28. Implement strStr()](./leetcode/leetcode-0028-implement-strstr.md)
+* [33. Search in ratated sorted](./leetcode/Leetcode-0033-search-in-rotated-sorted.md)
+* [34. Search for in Range](./leetcode/Leetcode-0034-search-for-a-range.md)
 * [35. Search Insert Position](./leetcode/leetcode-0035-search-insert-position.md)
 
 ## 排序-Sort

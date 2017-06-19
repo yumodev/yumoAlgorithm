@@ -21,7 +21,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 ### 中文翻译
 
 实现下一个排列，将数字排列成下一个更大的排列，如果没有更大的排列，那么就重新排列为尽可能低的顺序
-即以生序排列。不要额外分配内存。
+即以升序排列。不要额外分配内存。
 
 下面是一些例子：
 
@@ -37,6 +37,3 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 ### 参考
 
 [STL next_permutation 算法原理和自行实现](http://www.cnblogs.com/luruiyuan/p/5914909.html)
-
-
-
