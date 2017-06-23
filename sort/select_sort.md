@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 ## 选择排序
 
 ### 介绍
@@ -8,8 +9,9 @@
 ### 算法特点
 
 * 不稳定排序
-* 时间复杂度:O($n^2$)
-* 空间复杂度:O(1)
+* 时间复杂度:<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;O(n^{2})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;O(n^{2})" title="O(n^{2})" /></a>
+
+
 
 ### 代码示例-Java
 
@@ -57,5 +59,3 @@ public class SelectSort {
 }
 
 ```
-
-
