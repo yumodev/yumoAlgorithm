@@ -39,6 +39,8 @@
 ### 基础排序
 
 * [选择排序](./sort/select_sort.md)
+* [直接插入排序](./sort/insert_sort.md)
+* [冒泡排序](./sort/buddle_sort.md)
 
 ### 题目
 
