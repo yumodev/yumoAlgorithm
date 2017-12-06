@@ -3,58 +3,42 @@
 
 ## 介绍
 
-    选择排序的思想就是每次从待排序中选择一个最小的数，然后放到待排序的数组的前面，属于不稳定排序。
-    算法复杂度为
+ 1. 选择待排序序列中选择最小的元素，然后和待排序序列的第一个元素交换位置
+ 2. 将剩下的待排序序列中选择最小的元素，和待排序序列的第二个元素交换位置
+ 3. 重复以上步骤，直到将整个数组都排序。
 
+ 因为在不断的选择剩余最小的元素，所以称之为选择排序
+  
 ## 算法特点
 
 * 不稳定排序
-* 时间复杂度:  ![](../images/On2.png)
-
-
+* 交换次数固定为`n-1`次交换
+* 比较次数也固定为`(n-1)*n/2`次
+* 选择排序的时间复杂度和数据的输入无关
 
 ## 代码示例-Java
 
 ```
-public class SelectSort {
+ /**
+ * 简单选择排序
+ * @param nums
+ * @return
+ */
+public static void selectSort(int[] nums){
+    if (nums == null || nums.length <= 0) return;
 
-    /**
-     * 选择排序
-     * @param nums
-     * @return
-     */
-    public static int[] sort(int[] nums){
-        if (nums == null || nums.length <= 0){
-            return nums;
-        }
-
-        for (int i = 0; i < nums.length ; i++){
-            int minIndex = i;
-            for (int j = i + 1; j < nums.length; j++){
-                if (nums[j] < nums[minIndex]){
-                    minIndex = j;
-                }
+    int minIndex, temp;
+    for (int i = 0; i < nums.length ; i++){
+        minIndex = i;
+        for (int j = i + 1; j < nums.length; j++){
+            if (nums[j] < nums[minIndex]){
+                minIndex = j;
             }
-
-            int temp = nums[minIndex];
-            nums[minIndex] = nums[i];
-            nums[i] = temp;
         }
 
-        return nums;
-    }
-
-    public static void test(int[] nums){
-        System.out.println(String.format("before sort: %s", Arrays.toString(nums)));
-        long startTime = System.nanoTime();
-        int[] result = sort(nums);
-        long endTime = System.nanoTime();
-        System.out.println(String.format("time :" + (endTime - startTime)+" result: %s", Arrays.toString(result)));
-    }
-
-
-    public static void main(String[] args){
-        test(new int[]{4,3,2,1});
+        temp = nums[minIndex];
+        nums[minIndex] = nums[i];
+        nums[i] = temp;
     }
 }
 
